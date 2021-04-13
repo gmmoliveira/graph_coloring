@@ -30,56 +30,56 @@ with the following methods:
 			</li>
 		</ul>
 
-	</li>
+</li>
 
-	<li>
-		<code class="inline_code">GraphColoringMIP._lpsolution2coloring(self)</code>:
-		decodes the linear programming optimal solution vector
-		<code class="inline_code">X*</code>
-		into a human friendly format consisting of an array
-		of <code class="inline_code">|V|</code>
-		elements each representing a vertex of
-		<code class="inline_code">G</code>
-		with a color (integer number) assigned to it;
-	</li>
+<li>
+	<code class="inline_code">GraphColoringMIP._lpsolution2coloring(self)</code>:
+	decodes the linear programming optimal solution vector
+	<code class="inline_code">X*</code>
+	into a human friendly format consisting of an array
+	of <code class="inline_code">|V|</code>
+	elements each representing a vertex of
+	<code class="inline_code">G</code>
+	with a color (integer number) assigned to it;
+</li>
 
-	<li>
-		<code class="inline_code">GraphColoringMIP._update_heuristic_min_chrom(self)</code>:
-		updates an internal representation of the minimum chromatic number and
-		it's certificate using a heuristic
-		(algorithm which doesn't offer any guarantees of finding the optimum solution)
-		consisting of a greedy algorithm. Returns the chromatic number found by the heuristic;
-	</li>
+<li>
+	<code class="inline_code">GraphColoringMIP._update_heuristic_min_chrom(self)</code>:
+	updates an internal representation of the minimum chromatic number and
+	it's certificate using a heuristic
+	(algorithm which doesn't offer any guarantees of finding the optimum solution)
+	consisting of a greedy algorithm. Returns the chromatic number found by the heuristic;
+</li>
 
-	<li>
-		<code class="inline_code">GraphColoringMIP.model(self, ascopy=True, dtype=np.float64)</code>:
-		instantiates internal arrays to be used for the linear programming and fill them up.
-		The
-		heuristic from the method
-		<code class="inline_code">GraphColoringMIP._update_heuristic_min_chrom(self)</code>
-		is used
-		to find an upper limit on the amount of colors that may be used, this simple technique
-		reduces a the number of required variables in the final MIP model, therefore,
-		a solution may be found faster. Returns the LP data arrays;
-		<ul>
-			<li><code class="inline_code">ascopy</code>:
-				return copies of the LP data structures which may be safely modified outside
-				the scope of this object;
-			</li>
-			<li><code class="inline_code">dtype</code>:
-				sets the data type for the LP data arrays;
-			</li>
-		</ul>
-	</li>
+<li>
+	<code class="inline_code">GraphColoringMIP.model(self, ascopy=True, dtype=np.float64)</code>:
+	instantiates internal arrays to be used for the linear programming and fill them up.
+	The
+	heuristic from the method
+	<code class="inline_code">GraphColoringMIP._update_heuristic_min_chrom(self)</code>
+	is used
+	to find an upper limit on the amount of colors that may be used, this simple technique
+	reduces a the number of required variables in the final MIP model, therefore,
+	a solution may be found faster. Returns the LP data arrays;
+	<ul>
+		<li><code class="inline_code">ascopy</code>:
+			return copies of the LP data structures which may be safely modified outside
+			the scope of this object;
+		</li>
+		<li><code class="inline_code">dtype</code>:
+			sets the data type for the LP data arrays;
+		</li>
+	</ul>
+</li>
 
-	<li>
-		<code class="inline_code">GraphColoringMIP.solve(self)</code>:
-		solves the LP built by
-		<code class="inline_code">GraphColoringMIP.model(self, ascopy=True, dtype=np.float64)</code>.
-		Returns a 2-tuple containing the (guaranteed) minimum chromatic number and
-		the optimum solution vector
-		<code class="inline_code">X*</code> in a decoded (human-friendly) format;
-	</li>
+<li>
+	<code class="inline_code">GraphColoringMIP.solve(self)</code>:
+	solves the LP built by
+	<code class="inline_code">GraphColoringMIP.model(self, ascopy=True, dtype=np.float64)</code>.
+	Returns a 2-tuple containing the (guaranteed) minimum chromatic number and
+	the optimum solution vector
+	<code class="inline_code">X*</code> in a decoded (human-friendly) format;
+</li>
 </ul>
 
 <h3>Running an example</h3>
