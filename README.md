@@ -116,4 +116,4 @@ The color to assign to vertex k matches the k-th one in the following array:
  [0 1 0 2 3 1 1 2 4 2 2 1 1 3 4 0 4 3 2 4]
 </code></pre>
 
-Further reference on the problem formulation may be found here: https://gmmoliveira.github.io/blog/graph_coloring.html.
+Further reference on the problem formulation and solution may be found here: https://gmmoliveira.github.io/blog/graph_coloring.html.
